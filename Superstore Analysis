@@ -1,0 +1,17 @@
+Select*
+FROM superstore
+LIMIT 5;
+
+SELECT item_name, price
+FROM superstore
+ORDER BY price;
+
+SELECT SUM(price)
+FROM superstore;
+
+SELECT Round(SUM (price),2) AS total_price
+FROM superstore
+WHERE category='Kitchen Supplies';
+
+SELECT ROUND(SUM(price*stock_quantity),2) AS total_in_store
+FROM superstore;
